@@ -49,8 +49,17 @@ createApp({
         },
         thumbClick (indexImgClicked){
             this.currentIndex = indexImgClicked;
+        },
+        stopAutoplay (){
+            clearInterval(fistAutoplay);
+        },
+        secondAutoplay(){
+            fistAutoplay = setInterval(this.btnNext, 1800);
         }
     },
+     mounted () {
+         fistAutoplay = setInterval(this.btnNext, 1800);
+     }
 }).mount("#app")
 
 
