@@ -32,16 +32,25 @@ createApp({
     methods:{
         btnPrev(){
             //se i = o allora imposto all'ultimo indice disponibile:
-            if(this.currentIndex === 0){
-                this.currentIndex = this.slides.image.lenngth -1;
-            } else{
-                currentIndex --;
-            }
+             if( this.currentIndex === 0 ){
+                 this.currentIndex = this.slides.length -1;
+             } else {
+                 this.currentIndex --;
+             }
         },
         btnNext(){
-            currentIndex ++;
+             //se i = slider.length allora lo imposto a 0:
+             if( this.currentIndex === this.slides.length -1 ){
+                this.currentIndex = 0;
+            } else {
+                this.currentIndex ++;
+            }
+            // this.currentIndex ++;
+        },
+        thumbClick (indexImgClicked){
+            this.currentIndex = indexImgClicked;
         }
-    }
+    },
 }).mount("#app")
 
 
