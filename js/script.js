@@ -54,11 +54,11 @@ createApp({
             clearInterval(fistAutoplay);
         },
         secondAutoplay(){
-            fistAutoplay = setInterval(this.btnNext, 1800);
+            fistAutoplay = setInterval(this.btnNext, 1500);
         }
     },
      mounted () {
-         fistAutoplay = setInterval(this.btnNext, 1800);
+         fistAutoplay = setInterval(this.btnNext, 1500);
      }
 }).mount("#app")
 
