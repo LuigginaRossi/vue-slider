@@ -16,10 +16,10 @@
 
     <div id="app">
 
-        <div class="container">
-            <div class="slider-wrapper" tabindex="0" @mouseover="stopAutoplay" @mouseleave="secondAutoplay">
+        <div class="">
+            <div class="slider-wrapper p-5" style="height: 100vh; width: 100vw;" tabindex="0" @mouseover="stopAutoplay" @mouseleave="secondAutoplay">
 
-                <div class="item" >
+                <div class="item w-70" >
                     <img :src="slides[currentIndex].image" alt="Spiderman" />
                     <div class="text">
                         <h3>{{slides[currentIndex].title}}</h3>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
 
-                <div class="thumbs">
+                <div class="thumbs w-30">
                     <div class="prev" @click="btnPrev"></div>
                     <div class="next" @click="btnNext"></div>
                     <div class="thumb"
